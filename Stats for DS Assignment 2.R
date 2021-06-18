@@ -88,7 +88,7 @@ summary(model2)
 ?anova(model1, model2)
 
 # K-fold validation
-?cv.glm
+
 model1.fit = glm(Crime_pers ~ Lottery, data = Guerry)
 cv.err.1 = cv.glm(Guerry, model1.fit, K = 5)
 cv.err.1$delta
@@ -103,7 +103,7 @@ modeldummy <- lm(Guerry$Crime_pers ~ Guerry$MainCity, data = Guerry)
 summary(modeldummy)
 attach(Guerry)
 contrasts(MainCity)
-?contrasts
+
 fix(Guerry)
 levels(Guerry$MainCity)
 anova(modeldummy)
@@ -114,7 +114,7 @@ confint(model1)
 
 # Section 2.4 Variable Selection and Cross-Validation
 # (Model A)
-?glm
+
 model3 <- glm(Crime_pers ~ Literacy + Donations + Infants + Suicides + Wealth + Commerce + Clergy + Crime_parents + Infanticide + Donation_clergy + Lottery + I(Lottery^2) + Desertion + Instruction + Prostitutes + Distance + Area + Pop1831 + Mortality + Marriages + Legit_births_pd + Illeg_births_pd + Recruits_pd + Conscripts + Exemptions + Farmers_pd + Recruits_ignorant + Schoolchildren + Windows_doors + Primary_schools_pd + Life_exp, data = Guerry2)
 summary(model3)
 cv.err.3 = cv.glm(Guerry3, model3, K = 5)
@@ -159,7 +159,7 @@ cv.err.9 = cv.glm(Guerry3, model9, K = 5)
 cv.err.9$delta
 
 # Section 2.5 Diagnostics and Assumptions
-?plot
+
 plot(model6, which = 5, id.n = 10, labels.id = Guerry$Department, pch = 19, lwd = 2)
 
 residuals(model6)
@@ -181,4 +181,4 @@ vif(model6)
 plot(Guerry$Crime_pers, Guerry$MainCity
      , pch = 19, col = (Guerry$Region))
 cor.test(Angeville$Primary_schools, Angeville$Schoolchildren)
-?identify
+
