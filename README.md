@@ -1,5 +1,5 @@
-# Master-of-Data-Science
-Code uploaded as part of Master of Data Science course (2020-2021)
+# Master of Data Science
+A selection of code and reports submitted as part of the Master of Data Science course (2020-2021).
 
 ## Digital Humanities: Practice and Theory
 Notebook.ipynb and DHPT Essay.pdf
