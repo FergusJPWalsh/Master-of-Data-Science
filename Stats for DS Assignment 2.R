@@ -24,7 +24,7 @@ library(car)
 
 data(gfrance)
 
-# Create départment population density data frame
+# Create dÃ©partment population density data frame
 dfPop_density <- data.frame(dept = Guerry$dept, Pop_density = c(Guerry$Pop1831/Guerry$Area), Legit_births_pd = c(Angeville$Legit_births/Angeville$Pop1831), Illeg_births_pd = c(Angeville$Illeg_births/Angeville$Pop1831), Recruits_pd = c(Angeville$Recruits/Angeville$Pop1831), Farmers_pd = c(Angeville$Farmers/Angeville$Pop1831), Primary_schools_pd = c(Angeville$Primary_schools/Angeville$Pop1831))
 
 # Merge Guerry, Angeville and dfPop_density data frames
@@ -38,7 +38,7 @@ Guerry3 <- na.omit(Guerry2)
 
 # Section 1.1, Figure 1, recreate Plate I from Guerry (1833)
 essai.colours <- rev(brewer.pal(n = 5, name = "Greys"))
-spplot(gfrance, "Crime_pers", xlab = "1 Accusé sur ... habitants", main = "CRIMES CONTRE LES PERSONNES", col.regions = essai.colours, cuts = 4)
+spplot(gfrance, "Crime_pers", xlab = "1 AccusÃ© sur ... habitants", main = "CRIMES CONTRE LES PERSONNES", col.regions = essai.colours, cuts = 4)
 
 # Section 1.4 Preliminary Correlations
 cor.test(Guerry$Crime_parents, Guerry$Crime_pers, alternative = "two.sided", method = "pearson")
